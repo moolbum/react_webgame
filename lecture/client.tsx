@@ -1,14 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { hot } from 'react-hot-loader/root';
-import App from './App';
-import { StoreProvider } from './Context';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-const Hot = hot(App); // HOC
+import GuGuDan from "./GuGuDan";
 
-ReactDOM.render(
-    <StoreProvider>
-        <Hot />
-    </StoreProvider>,
-    document.querySelector('#root')
-);
+ReactDOM.render(<GuGuDan />, document.querySelector("#root"));
