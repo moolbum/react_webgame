@@ -31,17 +31,17 @@ const GuGuDan = () => {
   return (
     <>
       <div>
-        {first}곱하기 {second}는?
-        <form onSubmit={onSubmitForm}>
-          <input
-            ref={inputEl}
-            type="number"
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-        </form>
-        <div>{result}</div>
+        {first}곱하기 {second}는?{" "}
       </div>
+      <form onSubmit={onSubmitForm}>
+        <input
+          ref={inputEl}
+          type="number"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+      </form>
+      <div>{result}</div>
     </>
   );
 };
