@@ -1,7 +1,8 @@
 import * as React from "react";
+import { FunctionComponent } from "react";
 import { TryInfo } from "./types";
 
-const Try: React.FunctionComponent<{ tryInfo: TryInfo }> = ({ tryInfo }) => {
+const Try: FunctionComponent<{ tryInfo: TryInfo }> = ({ tryInfo }) => {
   console.log(tryInfo);
   return (
     <li>
