@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useCallback, memo, Dispatch, FunctionComponent } from 'react';
-import { CLICK_CELL } from './TicTacToe';
+import * as React from "react";
+import { useCallback, memo, Dispatch, FunctionComponent } from "react";
+import { CLICK_CELL } from "./TicTacToe";
 
 interface Props {
   rowIndex: number;
@@ -10,8 +10,13 @@ interface Props {
   children: string;
 }
 
-const Td: FunctionComponent<Props> = ({ rowIndex, cellIndex, dispatch, cellData }) => {
-  console.log('td rendered');
+const Td: FunctionComponent<Props> = ({
+  rowIndex,
+  cellIndex,
+  dispatch,
+  cellData,
+}) => {
+  console.log("td rendered");
 
   const onClickTd = useCallback(() => {
     console.log(rowIndex, cellIndex);
@@ -21,9 +26,7 @@ const Td: FunctionComponent<Props> = ({ rowIndex, cellIndex, dispatch, cellData 
     dispatch({ type: CLICK_CELL, row: rowIndex, cell: cellIndex });
   }, [cellData]);
 
-  return (
-    <td onClick={onClickTd}>{cellData}</td>
-  )
+  return <td onClick={onClickTd}>{cellData}</td>;
 };
 
 export default memo(Td);

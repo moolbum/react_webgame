@@ -1,7 +1,7 @@
 import * as React from "react";
-import { FC } from "react";
+import { FunctionComponent } from "react";
 
-const Ball: FC<{ number: number }> = ({ number }) => {
+const Ball: FunctionComponent<{ number: number }> = ({ number }) => {
   let background;
   if (number <= 10) {
     background = "red";

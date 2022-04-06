@@ -12,6 +12,7 @@ const scores = {
   바위: 0,
   보: -1,
 } as const;
+// 상수는 as const 를 붙여주는 것이 좋다.
 
 type ImgCoords = typeof rspCoords[keyof typeof rspCoords];
 
